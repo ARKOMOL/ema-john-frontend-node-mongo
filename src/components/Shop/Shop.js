@@ -16,8 +16,8 @@ const Shop = () => {
 
 
     useEffect( () =>{
-        // fetch('https://lit-reaches-26879.herokuapp.com/product')
-fetch(`http://localhost:5000/product?page=${page}&size=${size}`)
+        fetch(`https://lit-reaches-26879.herokuapp.com/product?page=${page}&size=${size}`)
+        // fetch(`http://localhost:5000/product?page=${page}&size=${size}`)
         .then(res => res.json())
         .then(data => {
             setProducts(data);
@@ -30,7 +30,7 @@ fetch(`http://localhost:5000/product?page=${page}&size=${size}`)
 
 
     useEffect(()=>{
-        fetch('http://localhost:5000/productCount')
+        fetch('https://lit-reaches-26879.herokuapp.com/productCount')
         .then(res =>res.json())
         .then(data =>{
 
